@@ -22,5 +22,47 @@
 * move RIGHT then DOWN */
 
 #translate {
-    transform: translate(100px, 50px);
+    transform: translate(10px, 5px);
 }
+
+/* step #1: define the animation sequence */
+
+@keyframes colorchange {
+    from { background-color: rgb(186, 186, 220);}
+    to { background-color: purple; }
+}
+
+    @keyframes colorchangesmooth {
+        0%{ background-color: rgb(186, 186, 220); }
+        50% { background-color: purple;}
+        100% { background-color: rgb(186, 186, 220);}
+    }
+
+/* step #2: configure the animation */
+
+#animated-box {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(51, 51, 162);
+    animation-name: colorchangesmooth;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+#animated-emoji {
+    font-size: 40px;
+    animation-name: spin;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+   
+}
+
+/*  border: 2px solid black;
+    display: inline-block */
